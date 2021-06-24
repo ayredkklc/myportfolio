@@ -53,7 +53,9 @@ def submit_form():
     else:
         return 'Something went wrong!'
 
-@app.route('/register/', methods=('GET', 'POST'))
+
+
+@app.route('/register/', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form.get('username')
@@ -84,7 +86,7 @@ def register():
     return "Register Page not yet implemented", 501
 
 
-@app.route('/login/', methods=('GET', 'POST'))
+@app.route('/login/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form.get('username')
