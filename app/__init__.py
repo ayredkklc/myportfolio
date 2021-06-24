@@ -34,7 +34,7 @@ def contact():
 
 @app.route('/health')
 def health():
-    return 'Correct', 200
+    return 'Correct not hfjhs', 200
 
 def write_to_csv(data):
     with open('database.csv', 'a', newline='') as csvfile:
