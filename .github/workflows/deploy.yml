@@ -19,8 +19,7 @@ jobs:
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy-key.pem
           chmod 600 ~/.ssh/deploy-key.pem
-          ssh-keyscan -H $SSH_IP > ~/.ssh/known_hosts
-          ssh-keyscan -H $SSH_IP > ~/.ssh/known_hosts
+          ssh-keyscan -H $SSH_USER > ~/.ssh/known_hosts
           cat >>~/.ssh/config <<END
           Host my-vm
             Hostname $SSH_IP
